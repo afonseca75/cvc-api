@@ -1,5 +1,8 @@
 package br.com.cvc.api.service;
 
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,8 +23,7 @@ public class HotelServiceTest {
 
 		@Bean
 		public HotelService hotelService() {
-			HotelService hotelService = new HotelService();
-			return hotelService;
+			return mock(HotelService.class);
 		}
 	}
 
@@ -29,14 +31,23 @@ public class HotelServiceTest {
 	HotelService hotelService;
 
 	@Test
-	public void testHotelService() {
-		System.out.println(hotelService.findById(1));
+	public void test_hotelEncontrado() {
+		final int idHotel = 1;
+		Hotel h = mock(Hotel.class);
+		when(hotelService.findById(idHotel)).thenReturn(h);
 	}
 	
 	@Test
-	public void testAllAvailable() {
-		Hotel[] hoteis = hotelService.findAllAvailableByIdCidade(1032);
-		
+	public void test_hotelNaoEncontrado() {
+		final int idHotel = 2;
+		Hotel h = mock(Hotel.class);
+		when(hotelService.findById(idHotel)).thenReturn(h);
 	}
+	
+//	@Test
+//	public void testAllAvailable() {
+////		Hotel[] hoteis = hotelService.findAllAvailableByIdCidade(1032);
+//		
+//	}
 
 }

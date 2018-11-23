@@ -3,7 +3,6 @@ package com.example;
 import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 
-import br.com.cvc.api.PropertiesConfig;
 import br.com.cvc.api.model.Hotel;
 
 public class Testa {
