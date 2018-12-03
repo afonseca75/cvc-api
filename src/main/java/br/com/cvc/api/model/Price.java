@@ -2,6 +2,8 @@ package br.com.cvc.api.model;
 
 import java.io.Serializable;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -31,7 +33,7 @@ public class Price implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Price [adult=" + adult + ", child=" + child + "]";
+		return ToStringBuilder.reflectionToString(this);
 	}
 
 }

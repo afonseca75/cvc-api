@@ -3,6 +3,8 @@ package br.com.cvc.api.service;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,10 +46,16 @@ public class HotelServiceTest {
 		when(hotelService.findById(idHotel)).thenReturn(h);
 	}
 	
-//	@Test
-//	public void testAllAvailable() {
-////		Hotel[] hoteis = hotelService.findAllAvailableByIdCidade(1032);
-//		
-//	}
+	@Test
+	public void testaRetornoServico1() {
+		int cityCode = 1032;
+		String checkin = "20/05/2017";
+		String checkout = "25/05/2017";
+		int qtdAdult = 2;
+		int qtdChild = 1;
+		
+//		Hotel[] hoteis = hotelService.findAllAvailableByIdCidade(1032);
+		
+	}
 
 }

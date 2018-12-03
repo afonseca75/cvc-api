@@ -2,6 +2,8 @@ package br.com.cvc.api.model;
 
 import java.io.Serializable;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -14,6 +16,10 @@ public class Room implements Serializable {
 	private String categoryName;
 
 	private Price price;
+
+	private double totalPrice;
+
+	private PriceDetail priceDetail;
 
 	public int getRoomID() {
 		return roomID;
@@ -39,9 +45,25 @@ public class Room implements Serializable {
 		this.price = price;
 	}
 
+	public double getTotalPrice() {
+		return totalPrice;
+	}
+
+	public void setTotalPrice(double totalPrice) {
+		this.totalPrice = totalPrice;
+	}
+
+	public PriceDetail getPriceDetail() {
+		return priceDetail;
+	}
+
+	public void setPriceDetail(PriceDetail priceDetail) {
+		this.priceDetail = priceDetail;
+	}
+
 	@Override
 	public String toString() {
-		return "Room [roomID=" + roomID + ", categoryName=" + categoryName + ", price=" + price + "]";
+		return ToStringBuilder.reflectionToString(this);
 	}
 
 }

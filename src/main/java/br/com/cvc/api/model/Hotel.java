@@ -3,6 +3,8 @@ package br.com.cvc.api.model;
 import java.io.Serializable;
 import java.util.List;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
+
 public class Hotel implements Serializable {
 
 	private static final long serialVersionUID = -2515779183630937564L;
@@ -59,8 +61,7 @@ public class Hotel implements Serializable {
 
 	@Override
 	public String toString() {
-		return "Hotel [id=" + id + ", name=" + name + ", cityCode=" + cityCode + ", cityName=" + cityName + ", rooms="
-				+ rooms + "]";
+		return ToStringBuilder.reflectionToString(this);
 	}
 
 }
