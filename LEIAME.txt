@@ -1,0 +1,1 @@
+http://localhost:8080/cvc/api/viagens?CityCode=1032&Checkin=20/05/2017&Checkout=25/05/2017&qtdAdult=2&qtdChild=1
