@@ -4,9 +4,6 @@ import java.io.Serializable;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Room implements Serializable {
 
 	private static final long serialVersionUID = 6456328498489565098L;

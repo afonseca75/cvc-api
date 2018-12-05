@@ -4,9 +4,6 @@ import java.io.Serializable;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class Price implements Serializable {
 
 	private static final long serialVersionUID = -622674161753110356L;
